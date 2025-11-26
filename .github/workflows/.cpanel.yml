@@ -1,5 +1,4 @@
 ---
 deployment:
   tasks:
-    - export DEPLOYPATH=/home4/ramesura/public_html/website_c7aa8054/
-    - /bin/rsync -av --delete --exclude='.git' --exclude='.cpanel.yml' . $DEPLOYPATH
+    - echo "Deploying directly to live folder – nothing to copy"

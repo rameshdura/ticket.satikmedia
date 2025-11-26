@@ -20,4 +20,4 @@ jobs:
           key: ${{ secrets.SSH_PRIVATE_KEY }} # Use the private key secret
           port: 22 # Standard SSH/SFTP port
           source: "." # Source files from the repo root
-          target: "/home4/ramesura/public_html/website_c7aa8054"
+          target: "public_html/website_c7aa8054"

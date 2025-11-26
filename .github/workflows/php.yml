@@ -18,6 +18,6 @@ jobs:
           host: ${{ secrets.FTP_SERVER }}
           username: ${{ secrets.FTP_USERNAME }}
           key: ${{ secrets.SSH_PRIVATE_KEY }} # Use the private key secret
-          port: 22 # Standard SSH/SFTP port
+          port: 21 # Standard SSH/SFTP port
           source: "." # Source files from the repo root
           target: "public_html/website_c7aa8054"

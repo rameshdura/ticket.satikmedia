@@ -1,4 +1,0 @@
----
-deployment:
-  tasks:
-    - echo "Deploying directly to live folder – nothing to copy"

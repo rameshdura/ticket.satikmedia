@@ -25,15 +25,15 @@ class Database extends Config
      * @var array<string, mixed>
      */
     public array $default = [
-        'DSN'          => '',
-        'hostname'     => 'localhost',
-        'username'     => '',
-        'password'     => '',
-        'database'     => '',
+        'DSN'          => env('database.default.DSN') ?? '',
+        'hostname'     => env('database.default.hostname') ?? 'localhost',
+        'username'     => env('database.default.username') ?? '',
+        'password'     => env('database.default.password') ?? '',
+        'database'     => env('database.default.database') ?? '',
         'DBDriver'     => 'MySQLi',
         'DBPrefix'     => '',
         'pConnect'     => false,
-        'DBDebug'      => true,
+        'DBDebug'      => env('CI_ENVIRONMENT') !== 'production',
         'charset'      => 'utf8mb4',
         'DBCollat'     => 'utf8mb4_general_ci',
         'swapPre'      => '',
@@ -41,7 +41,7 @@ class Database extends Config
         'compress'     => false,
         'strictOn'     => false,
         'failover'     => [],
-        'port'         => 3306,
+        'port'         => (int) (env('database.default.port') ?? 3306),
         'numberNative' => false,
         'foundRows'    => false,
         'dateFormat'   => [
